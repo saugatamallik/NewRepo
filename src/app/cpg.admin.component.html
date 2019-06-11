@@ -1,0 +1,27 @@
+<section class="outter_wrapper">
+    <!--BEGIN out-->
+    <div class="out">     
+        <div class="wrapper">
+            <div class="main-content-area">
+                <div class="admin-home manage-user" *ngIf="!isLogin">
+                    <cpg-admin-sidebar></cpg-admin-sidebar>
+                    <div class="admin-home__content">
+                        <cpg-admin-header></cpg-admin-header>                
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>             
+                <router-outlet *ngIf="isLogin"></router-outlet>
+            </div>
+        </div>    
+        <!--BEGIN pop-up-->
+        <div id="pop-up__exit" class="pop-up pop-up__exit modal">
+          <h3>Are you sure?</h3>
+          <p>Are you sure that you want to perform this action?</p>
+          <div class="pop-up__exit__btn"><a href="#" rel="modal:close" class="btn btn-primary">No</a><a href="#" rel="modal:close" class="btn btn-secondary pop-up__exit__btn--exit">Yes</a></div>
+        </div>
+        <!--END pop-up--> 
+    </div>
+    <!--END out--> 
+    <!--LOAD SCRIPTS-->
+</section>
+<cpg-admin-footer></cpg-admin-footer>

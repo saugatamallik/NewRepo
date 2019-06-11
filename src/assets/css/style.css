@@ -1,0 +1,15 @@
+@charset "UTF-8";
+::-webkit-scrollbar {
+width: 12px;
+background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+background-color: #293134;
+}
+.admin-file_upload__log .table td{
+   
+    border-top: 0px solid #dee2e6;
+}
+a{text-decoration: none !important;}

@@ -1,0 +1,70 @@
+
+<section class="outter_wrapper">
+  <!--BEGIN out-->
+  <div class="out">     
+    <div class="wrapper">
+      <div class="main-content-area">
+        <div class="login">
+          <div class="container">
+            <div class="login__content">
+              <div class="login__form">
+                
+                <form class="login__form__block" [formGroup]="signInForm">
+                  <img src="assets/img/logo-black.png" alt="">
+                  <h1>Sign in to CPG</h1>
+                  <div class="alert alert-danger fade in alert-dismissible show" *ngIf="errorMessage">
+                    <strong>{{errorMessage}}</strong> 
+                   </div>
+                  <div class="login__form__input">
+                    <input type="text" name="username" id="username" formControlName="username" required>
+                    <label for="username">Username</label>
+                  </div>
+                  <div class="login__form__input">
+                    <input type="password" name="password" id="password" formControlName="password" required>
+                    <label for="password">Password</label>
+                  </div>
+                  <div class="login__form__checkbox">
+                    <input type="checkbox" name="checkbox" id="checkbox" checked>
+                    <label for="checkbox">Remember me?</label>
+                    <a href="#">Forgot Password?</a>
+                  </div>
+                  <input type="submit" value="Sign in" class="btn btn-secondary" (click)="signIn()">
+                </form>
+                <p>Powered by TEG</p>
+              </div>
+              <div class="login__new">
+                <h2>What’s new</h2>
+                <div class="login__new__block">
+                  <div class="login__new__block__title"><img src="assets/img/app.png" alt="">
+                    <h3>In-App Notification</h3>
+                  </div>
+                  <p>Deliver rich contextual messages for better conversion.</p>
+                </div>
+                <div class="login__new__block">
+                  <div class="login__new__block__title"><img src="assets/img/location.png" alt="">
+                    <h3>Geofence Notification</h3>
+                  </div>
+                  <p>Location & periphery based smart alerts</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+    
+    <!--BEGIN footer-->
+    <footer class="footer"></footer>
+    <!--END footer--> 
+    
+    <!--BEGIN pop-up-->
+    <div id="pop-up__exit" class="pop-up pop-up__exit modal">
+      <h3>Are you sure?</h3>
+      <p>Are you sure that you want to perform this action?</p>
+      <div class="pop-up__exit__btn"><a href="#" rel="modal:close" class="btn btn-primary">No</a><a href="#" rel="modal:close" class="btn btn-secondary pop-up__exit__btn--exit">Yes</a></div>
+    </div>
+    <!--END pop-up--> 
+  </div>
+  <!--END out--> 
+  <!--LOAD SCRIPTS-->
+</section>
